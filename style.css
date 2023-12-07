@@ -1,0 +1,51 @@
+@import "nullstyle.scss";
+
+body {
+    font-family: Arial, "Helvetic Neue", Helvetica, sans-serif;
+}
+
+body {
+    padding: 50px;
+}
+
+.content__circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    animation: red-circle 2s linear infinite alternate 0s forwards, black-circle 5s ease infinite alternate 0s forwards;
+}
+
+.content:hover .content__circle {
+    animation-play-state: paused;
+}
+
+@keyframes red-circle {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        border-radius: 0%;
+    }
+
+    100% {
+        left: 500px;
+    }
+}
+
+@keyframes black-circle {
+    0% {
+        background-color: #ff0000;
+    }
+
+    50% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #ff0000;
+    }
+}
